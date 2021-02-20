@@ -8,7 +8,7 @@ out_dir=out
 mkdir -p $out_dir
 
 docker build -t protoc .
-docker run -it --rm \
+docker run --rm \
     -v $(pwd):/protoc \
     protoc \
     -I=$src_dir \
